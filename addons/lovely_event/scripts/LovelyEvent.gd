@@ -29,7 +29,7 @@ var default_queue_check : Callable;
 
 func _init() -> void:
 	process_mode = PROCESS_MODE_ALWAYS;
-	default_queue_check = func() -> bool: return false;
+	default_queue_check = func( event : EVENT = null ) -> bool: return false;
 
 
 func _ready() -> void:
