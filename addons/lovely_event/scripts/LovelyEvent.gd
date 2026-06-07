@@ -76,13 +76,6 @@ func delete_queue( event_queue : EventQueue ) -> void:
 		queue_list.erase( event_queue.id );
 	else:
 		push_error( err_couldntFindQueueOfID % event_queue.id );
-	
-	
-	if not event_queue.is_essential:
-		event_queue.clear();
-		queue_list.erase( event_queue );
-	else:
-		push_error( err_cannotDeleteEssentialQueue );
 
 
 func delete_queue_by_ID( queue_id : String ) -> void:
