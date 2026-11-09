@@ -64,7 +64,7 @@ func check_main_queue_check() -> bool:
 func check_pause_check() -> bool:
 	if not pause:
 		return true;
-	if (not LovelyEvent.pause) or (runs_while_pause_all and LovelyEvent.pause):
+	if (not LovelyEvent.pause_all) or (runs_while_pause_all and LovelyEvent.pause_all):
 		return true;
 	return false;
 
